@@ -1,0 +1,79 @@
+<style>
+
+  table,td,th {
+    border: 1px solid black;
+  }
+
+  table{
+    border-collapse: collapse;
+    width: 90%;
+  }
+
+  th{
+    height: 50px;
+  }
+
+  /*table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td{
+    text-align: left;
+    padding: 8px;
+
+  }
+  tr:nth-child(even) {background-color: #f2f2f2}*/
+
+</style>
+<h2>Get Request (https://jsonplaceholder.typicode.com/posts/1/comments)</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Post Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+  </tr>
+
+  <tr *ngFor="let com of lstcomments">
+    <td>{{com.id}}</td>
+    <td>{{com.postId}}</td>
+    <td>{{com.name}}</td>
+    <td>{{com.email}}</td>
+    <td>{{com.body}}</td>
+  </tr>
+  
+</table>
+<br>
+<br>
+
+<h2>Get Request (Using Parameters) (https://jsonplaceholder.typicode.com/posts)</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>UserId</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+
+  <tr *ngFor="let com of lstPosts">
+    <td>{{com.id}}</td>
+    <td>{{com.userId}}</td>
+    <td>{{com.title}}</td>
+    <td>{{com.body}}</td>
+  </tr>
+  
+</table>
+
+<br>
+<br>
+
+<h2>Post Data RETURNED (https://jsonplaceholder.typicode.com/posts)</h2>
+
+<p>id: {{objPosts?.id}}</p>
+<p>UserId : {{objPosts?.userId}}</p>
+<p>Title : {{objPosts?.title}}</p>
+<p>Body : {{objPosts?.body}}</p>
